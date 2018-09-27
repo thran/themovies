@@ -1,20 +1,27 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="image">
+    <img src="assets/strips.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active1}" src="assets/1 - hermiona.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active2}" src="assets/2 - furiosa.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active3}" src="assets/3 - katniss.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active4}" src="assets/4 - avatar.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active5}" src="assets/5 - joker.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active6}" src="assets/6 - jones.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active7}" src="assets/7 - bride.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active8}" src="assets/8 - landa.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active9}" src="assets/9 - bond.jpg" alt="">
 
+    <div class="area" (mouseenter)="active1 = true" (mouseleave)="active1 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active2 = true" (mouseleave)="active2 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active3 = true" (mouseleave)="active3 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active4 = true" (mouseleave)="active4 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active5 = true" (mouseleave)="active5 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active6 = true" (mouseleave)="active6 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active7 = true" (mouseleave)="active7 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active8 = true" (mouseleave)="active8 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+    <div class="area" (mouseenter)="active9 = true" (mouseleave)="active9 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+
+</div>
+
+
+<h1>The Movies</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum dui at neque tempor tempus ut at leo. Duis rhoncus finibus mattis. Quisque convallis laoreet risus. Nam in risus sit amet metus malesuada auctor. Etiam vulputate sit amet ipsum sed bibendum. Phasellus eget consequat ante. Morbi mollis elementum vestibulum. Nulla interdum sem fringilla, tincidunt purus eget, tristique metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam nunc nunc, fermentum in purus ac, sollicitudin vestibulum diam. Donec facilisis lacus faucibus semper finibus. Sed eros nisl, euismod quis velit ac, ultricies suscipit massa. Duis auctor porta tellus ac dignissim. Sed id mi id nibh tempor placerat ut et lectus. Aenean tincidunt sem ut ullamcorper finibus. Nunc eleifend felis a quam pellentesque, id sagittis elit fermentum.</p>

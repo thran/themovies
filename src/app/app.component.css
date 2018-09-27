@@ -1,0 +1,40 @@
+#image {
+    width: 100vw;
+    height: 56.25vw;
+    position: relative;
+}
+
+#image img {
+    max-width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#image .strip {
+    opacity: 0;
+    transition: opacity 1.2s;
+}
+#image .strip.active {
+    opacity: 1;
+}
+
+
+#image .area {
+    height: 100%;
+    width: 11.11%;
+    float: left;
+    z-index: 10;
+}
+
+h1 {
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+p {
+    text-align: center;
+    margin: auto;
+    max-width: 500px;
+}
