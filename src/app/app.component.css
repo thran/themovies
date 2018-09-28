@@ -2,6 +2,17 @@
     width: 100vw;
     height: 56.25vw;
     position: relative;
+    transition: all 1s;
+    max-width: 100vw;
+    max-height: 56.25vw;
+    margin: auto;
+    margin-top: 0;
+}
+
+#image.smaller {
+    max-width: 800px;
+    max-height: 450px;
+    margin-top: 50px;
 }
 
 #image img {

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+// import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
     ],
     imports: [
         BrowserModule,
-        ScrollToModule.forRoot(),
+        // ScrollToModule.forRoot(),
     ],
     providers: [],
     bootstrap: [AppComponent]

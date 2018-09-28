@@ -1,25 +1,22 @@
-<div id="image">
+<div id="image" [ngClass]="{'smaller': smaller}">
     <img src="assets/strips.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active1}" src="assets/1 - hermiona.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active2}" src="assets/2 - furiosa.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active3}" src="assets/3 - katniss.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active4}" src="assets/4 - avatar.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active5}" src="assets/5 - joker.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active6}" src="assets/6 - jones.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active7}" src="assets/7 - bride.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active8}" src="assets/8 - landa.jpg" alt="">
-    <img class="strip" [ngClass]="{'active': active9}" src="assets/9 - bond.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[0]}" src="assets/1 - hermiona.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[1]}" src="assets/2 - furiosa.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[2]}" src="assets/3 - katniss.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[3]}" src="assets/4 - avatar.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[4]}" src="assets/5 - joker.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[5]}" src="assets/6 - jones.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[6]}" src="assets/7 - bride.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[7]}" src="assets/8 - landa.jpg" alt="">
+    <img class="strip" [ngClass]="{'active': active[8]}" src="assets/9 - bond.jpg" alt="">
 
     <div id="areas">
-        <div class="area" (mouseenter)="active1 = true" (mouseleave)="active1 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active2 = true" (mouseleave)="active2 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active3 = true" (mouseleave)="active3 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active4 = true" (mouseleave)="active4 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active5 = true" (mouseleave)="active5 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active6 = true" (mouseleave)="active6 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active7 = true" (mouseleave)="active7 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active8 = true" (mouseleave)="active8 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
-        <div class="area" (mouseenter)="active9 = true" (mouseleave)="active9 = false" ngx-scroll-to [ngx-scroll-to-offset]="500"></div>
+        <div *ngFor="let b of active; let i = index"
+             class="area"
+             (mouseenter)=" setFalses(); active[i] = true;"
+             (mouseleave)="active[i] = false"
+             (click)="smaller = !smaller"
+        ></div>
     </div>
 </div>
 
