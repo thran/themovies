@@ -1,4 +1,4 @@
-<div id="image" [ngClass]="{'smaller': smaller}">
+<div id="image" [ngClass]="{'smaller': smaller}" (mouseleave)="setFalses()">
     <img src="assets/strips.jpg" alt="">
     <img class="strip" [ngClass]="{'active': active[0]}" src="assets/1 - hermiona.jpg" alt="">
     <img class="strip" [ngClass]="{'active': active[1]}" src="assets/2 - furiosa.jpg" alt="">
@@ -13,8 +13,7 @@
     <div id="areas">
         <div *ngFor="let b of active; let i = index"
              class="area"
-             (mouseenter)=" setFalses(); active[i] = true;"
-             (mouseleave)="active[i] = false"
+             (mouseover)="setFalses(); active[i] = true;"
              (click)="smaller = !smaller"
         ></div>
     </div>
